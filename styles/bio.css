@@ -1,1 +1,21 @@
-/*# sourceMappingURL=bio.css.map */
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../../assets/Font/NunitoSans-Regular.woff") format("woff");
+}
+body {
+  font-family: "Nunito Sans";
+}
+
+h1, h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 0.8rem;
+  font-weight: 400;
+}/*# sourceMappingURL=bio.css.map */
