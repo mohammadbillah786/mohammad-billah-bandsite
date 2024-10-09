@@ -8,7 +8,8 @@ body {
   margin: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 1.5rem;
 }
 
@@ -38,12 +39,20 @@ nav .nav-subheading {
   justify-content: space-evenly;
   width: 100%;
 }
+nav .nav-subheading h3 {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  padding: 1rem;
+  margin: 0;
+}
+nav .nav-subheading h3:hover {
+  font-weight: 800;
+  border-bottom: solid #FFFFFF 0.2rem;
+  padding-bottom: 0.01rem;
+}
 
 .hero-section {
-  background-color: #323232;
-  z-index: 2;
-}
-.hero-section .hero-section__text {
   width: 100%;
   height: 70vw;
   background-image: url("../assets/Images/hero-bio.jpg");
@@ -52,20 +61,62 @@ nav .nav-subheading {
   display: flex;
   align-items: center;
   color: #FFFFFF;
+  z-index: 1;
 }
-.hero-section .hero-section__text h1 {
+.hero-section .hero-section__overlay {
+  position: absolute;
+  background-color: #323232;
+  opacity: 50%;
+  width: 100%;
+  height: 70vw;
+  color: transparent;
+  z-index: 2;
+}
+.hero-section h1 {
   margin-top: 0;
   padding-left: 1rem;
+  z-index: 3;
+}
+
+.about-section {
+  padding: 1rem;
+  padding-bottom: 0;
+}
+.about-section__img {
+  width: 100%;
+}
+.about-section h3 {
+  line-height: 2rem;
+}
+
+.band-description {
+  padding: 1rem;
+  padding-top: 0;
+}
+.band-description h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.band-description p {
+  line-height: 1.2rem;
+  font-size: 1rem;
+}
+
+.photo-gallery {
+  padding: 1rem;
+  background-color: #FAFAFA;
+}
+.photo-gallery img {
+  width: 100%;
+  padding-bottom: 1rem;
 }
 
 footer {
   padding: 1rem;
+  background-color: #323232;
+  color: #FFFFFF;
 }
-
-.about-section__img {
-  width: 100%;
-}
-
-.photo-gallery img {
-  width: 100%;
+footer .icons {
+  display: flex;
+  gap: 10%;
 }/*# sourceMappingURL=bio.css.map */
