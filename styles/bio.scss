@@ -3,15 +3,19 @@
 h1,
 h2 {
   font-size: 1.5rem;
+
+  @include tablet {
+    font-size: 3rem;
+  }
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 2.2rem;
   font-weight: 600;
 }
 
 p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -23,29 +27,57 @@ nav {
   background-color: $black;
   color: $white;
 
-  h1 {
-    margin-bottom: 0;
+  @include tablet {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: baseline;
+
+    h1 {
+      padding: 1.5rem;
+      padding-right: 2.5rem;
+      margin-top: 0;
+      font-size: 2rem;
+    }
+  }
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+.nav-subheading {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+
+  @include tablet {
+    display: flex;
+    justify-content: flex-start;
+    width: 15%;
+    height: 100%;
   }
 
-  .nav-subheading {
-    display: flex;
-    justify-content: space-evenly;
+  h3 {
     width: 100%;
+    text-align: center;
+    font-weight: 500;
+    padding: 1rem;
+    margin: 0;
 
-    h3 {
-        width: 100%;
-        text-align: center;
-        font-weight: 500;
-        padding: 1rem;
-        margin: 0;
+    @include tablet {
+      text-align: center;
+      font-size: 1rem;
+      padding: 2rem;
     }
+  }
 
-    h3:hover {
-        font-weight: 800;
-        border-bottom: solid $white 0.2rem;
-        padding-bottom: 0.01rem;
+  h3:hover {
+    font-weight: 800;
+    border-bottom: solid $white 0.2rem;
+    padding-bottom: 0.01rem;
 
-    }
+
   }
 }
 
@@ -83,16 +115,42 @@ nav {
 
   &__img {
     width: 100%;
+    @include tablet {
+      padding: 2.2rem;
+      padding-bottom: 0;
+      padding-top: 0;
+      box-sizing: border-box;
+    }
   }
 
   h3 {
     line-height: 2rem;
+
+    @include tablet {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
   }
 }
 
 .band-description {
   padding: 1rem;
   padding-top: 0;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+
+    .band-description__text {
+      display: flex;
+      gap: 2.5%;
+
+      p {
+        line-height: 1.5rem;
+      }
+    }
+  }
 
   h3 {
     font-size: 1.2rem;
@@ -113,6 +171,9 @@ nav {
     width: 100%;
     padding-bottom: 1rem;
   }
+
+  @include tablet {
+  }
 }
 
 footer {
@@ -126,9 +187,9 @@ footer {
   }
 
   p {
-      margin: 0;
+    margin: 0;
   }
-  
+
   section {
     p {
       margin: 0;
@@ -142,7 +203,5 @@ footer {
     h2 {
       margin-top: 3rem;
     }
-
-
   }
 }
