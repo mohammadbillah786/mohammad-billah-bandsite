@@ -119,4 +119,17 @@ footer {
 footer .icons {
   display: flex;
   gap: 10%;
+}
+footer p {
+  margin: 0;
+}
+footer section p {
+  margin: 0;
+}
+footer section .email {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+footer section h2 {
+  margin-top: 3rem;
 }/*# sourceMappingURL=bio.css.map */
