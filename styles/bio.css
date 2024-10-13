@@ -39,6 +39,10 @@ nav {
   background-color: #323232;
   color: #FFFFFF;
 }
+nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
 @media (min-width: 768px) {
   nav {
     display: flex;
@@ -51,10 +55,6 @@ nav {
     padding-right: 2.5rem;
     margin-top: 0;
     font-size: 2rem;
-  }
-  nav h1 a {
-    text-decoration: none;
-    color: #FFFFFF;
   }
 }
 @media (min-width: 1280px) {
@@ -336,10 +336,10 @@ footer .bandsite-logo {
 }
 @media (min-width: 768px) {
   footer .footer-section-body section h3 {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   footer .footer-section-body section p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 footer .icons {
