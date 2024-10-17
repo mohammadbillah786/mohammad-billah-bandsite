@@ -1,0 +1,32 @@
+/* Mixins */
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
+
+/* Fonts */
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('../../assets/Font/NunitoSans-Regular.woff') format('woff');
+}
+
+
+/* Variables */
+$black: #323232;
+$white: #FFFFFF;
+$mercury: #E1E1E1;
+$alabaster: #FAFAFA;
+
+
+body {
+    font-family: 'Nunito Sans';
+    margin: 0;
+}
