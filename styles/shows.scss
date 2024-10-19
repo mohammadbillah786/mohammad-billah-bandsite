@@ -1,0 +1,243 @@
+@use "../styles/partials/global" as *;
+
+.hero-section {
+  width: 100%;
+  height: 50vh;
+  background-image: url("../assets/Images/hero-shows.jpg");
+  background-size: cover;
+  z-index: 1;
+  display: flex;
+  justify-content: start;
+  color: $white;
+  z-index: 1;
+  flex-direction: column;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    .split {
+        padding-left: 5rem;
+        width: 60%;
+    }
+  }
+
+  @include tablet {
+    height: 70vh;
+  }
+
+
+
+  div {
+    z-index: 4;
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    h3 {
+      color: $white;
+      line-height: 20%;
+      font-size: 2rem;
+    }
+
+    h4 {
+      font-weight: 400;
+    }
+
+    @include tablet {
+      padding-left: 1.5rem;
+
+      h3 {
+        font-size: 4rem;
+        margin-top: 2.5rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .music {
+    height: 20vh;
+    width: 100%;
+
+    @include tablet {
+      width: 50%;
+    }
+  }
+
+  @include desktop {
+    height: 80vh;
+  }
+
+  .hero-section__overlay {
+    position: absolute;
+    background-color: $black;
+    opacity: 50%;
+    width: 100%;
+    height: 50vh;
+    color: transparent;
+    z-index: 2;
+    box-sizing: border-box;
+
+    @include tablet {
+      height: 70vh;
+    }
+  }
+
+  @include desktop {
+    .hero-section__overlay {
+      height: 80vh;
+    }
+  }
+
+  h1 {
+    margin-top: 0;
+    padding-left: 1rem;
+    z-index: 3;
+
+    @include desktop {
+      padding-left: 5rem;
+    }
+  }
+}
+
+#shows {
+  h3 {
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .date-real {
+    font-weight: 700;
+  }
+
+  h4 {
+    font-weight: 400;
+  }
+
+  .titles {
+    color: $silver;
+  }
+  .shows-list {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: $mercury 2px solid;
+
+    h5 {
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      margin-top: 0;
+    }
+    @include tablet {
+      h4 {
+        margin-top: 2rem;
+      }
+
+      display: flex;
+      align-items: last baseline;
+      padding-bottom: 0;
+    }
+  }
+
+  .buy-tickets-button {
+    width: 100%;
+    padding-left: 1rem;
+    margin-right: 1rem;
+    border: none;
+    background-color: $black;
+    color: $white;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+
+    @include tablet {
+      margin-left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      width: 20%;
+      height: 20%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+
+      @include desktop {
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    .shows-list {
+      display: flex;
+    }
+
+    .another-div {
+      width: 30%;
+    }
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20%;
+
+      #anotherdiv {
+        width: 60%;
+      }
+    }
+  }
+}
+
+.titles {
+  display: block; /* Hide titles on mobile */
+}
+
+.titles-not-mobile {
+  display: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: start;
+    color: $silver;
+    gap: 6%;
+    h5 {
+      padding-top: 2rem;
+      width: 25%;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .other {
+      visibility: hidden;
+    }
+  }
+}
+
+/* Larger screens (tablet and desktop) - show titles */
+@include tablet {
+  .titles {
+    display: none; /* Show titles on tablet and desktop */
+  }
+}
+
+@include desktop {
+  .titles {
+    display: none; /* Show titles on tablet and desktop */
+  }
+}

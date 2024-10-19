@@ -24,9 +24,269 @@ $black: #323232;
 $white: #FFFFFF;
 $mercury: #E1E1E1;
 $alabaster: #FAFAFA;
-
+$silver: #AFAFAFAF;
 
 body {
     font-family: 'Nunito Sans';
     margin: 0;
 }
+
+h1,
+h2 {
+  font-size: 1.5rem;
+
+  @include tablet {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $black;
+  color: $white;
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+
+  @include tablet {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: baseline;
+
+    h1 {
+      padding: 1.5rem;
+      padding-right: 2.5rem;
+      margin-top: 0;
+      font-size: 2rem;
+    }
+  }
+
+  @include desktop {
+    h1 {
+      padding-left: 5rem;
+    }
+  }
+}
+
+h1 {
+    margin-bottom: 0;
+  }
+
+
+  h1 {
+    margin-bottom: 0;
+  }
+  
+  .nav-subheading {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  
+    @include tablet {
+      display: flex;
+      justify-content: flex-start;
+      width: 15%;
+      height: 100%;
+    }
+  
+    h3 {
+      width: 100%;
+      text-align: center;
+      font-weight: 500;
+      padding: 1rem;
+      margin: 0;
+      font-size: 1rem;
+  
+      @include tablet {
+        text-align: center;
+        font-size: 1rem;
+        padding: 2rem;
+      }
+    }
+  
+    h3:hover {
+      font-weight: 800;
+      border-bottom: solid $white 0.2rem;
+      padding-bottom: 0.01rem;
+    }
+  }
+
+  footer {
+    h3 {
+      font-size: 1rem;
+    }
+  
+    .bandsite-logo {
+      display: none;
+  
+      @include tablet {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  
+    @include desktop {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  
+    @include tablet {
+      .bandsite-bottom {
+        flex-basis: 100%;
+  
+        p {
+          font-size: 0.8rem;
+        }
+  
+        .bandsite-bottom__logo {
+          display: none;
+        }
+      }
+  
+      .bandsite-logo {
+        flex-grow: 1;
+  
+        h1 {
+          margin-top: 2.7rem;
+          display: flex;
+          justify-content: end;
+          font-weight: 500;
+          font-size: 1.5rem;
+        }
+      }
+  
+      h1 {
+        font-size: 2.5rem;
+        flex-grow: 0;
+        height: 40%;
+      }
+  
+      .footer-section-body {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 5%;
+  
+        @include desktop {
+          justify-content: flex-start;
+          gap: 0%;
+  
+          section {
+            flex-basis: 25%;
+          }
+        }
+  
+        section {
+          h3 {
+            font-size: 1rem;
+          }
+  
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  
+    padding: 1rem;
+    background-color: $black;
+    color: $white;
+  
+    .icons {
+      display: flex;
+      gap: 10%;
+  
+      @include tablet {
+        gap: 0%;
+      }
+  
+      @include desktop {
+        gap: 0%;
+      }
+  
+      img {
+        padding-top: 1rem;
+        height: 2rem;
+      }
+  
+      @include tablet {
+        height: auto;
+      }
+    }
+  
+    p {
+      margin: 0;
+    }
+  
+    section {
+      @include tablet {
+        flex-basis: 30%;
+      }
+  
+      p {
+        margin: 0;
+      }
+  
+      .email {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+  
+      h2 {
+        margin-top: 3rem;
+      }
+  
+      @include tablet {
+        h3 {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+  
+      .icons {
+        max-width: 20%;
+        align-items: end;
+        justify-content: space-between;
+        padding-bottom: 0.8rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+  
+        img {
+          width: 100%;
+  
+          @include tablet {
+            width: auto;
+            height: 50%;
+            display: flex;
+            align-items: end;
+          }
+  
+          @include desktop {
+            margin-left: 20%;
+          }
+        }
+      }
+    }
+  }

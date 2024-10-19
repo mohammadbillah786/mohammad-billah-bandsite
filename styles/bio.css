@@ -67,6 +67,10 @@ h1 {
   margin-bottom: 0;
 }
 
+h1 {
+  margin-bottom: 0;
+}
+
 .nav-subheading {
   display: flex;
   justify-content: space-evenly;
@@ -99,6 +103,157 @@ h1 {
   font-weight: 800;
   border-bottom: solid #FFFFFF 0.2rem;
   padding-bottom: 0.01rem;
+}
+
+footer {
+  padding: 1rem;
+  background-color: #323232;
+  color: #FFFFFF;
+}
+footer h3 {
+  font-size: 1rem;
+}
+footer .bandsite-logo {
+  display: none;
+}
+@media (min-width: 768px) {
+  footer .bandsite-logo {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 1280px) {
+  footer {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media (min-width: 768px) {
+  footer .bandsite-bottom {
+    flex-basis: 100%;
+  }
+  footer .bandsite-bottom p {
+    font-size: 0.8rem;
+  }
+  footer .bandsite-bottom .bandsite-bottom__logo {
+    display: none;
+  }
+  footer .bandsite-logo {
+    flex-grow: 1;
+  }
+  footer .bandsite-logo h1 {
+    margin-top: 2.7rem;
+    display: flex;
+    justify-content: end;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  footer h1 {
+    font-size: 2.5rem;
+    flex-grow: 0;
+    height: 40%;
+  }
+  footer .footer-section-body {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 5%;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  footer .footer-section-body {
+    justify-content: flex-start;
+    gap: 0%;
+  }
+  footer .footer-section-body section {
+    flex-basis: 25%;
+  }
+}
+@media (min-width: 768px) {
+  footer .footer-section-body section h3 {
+    font-size: 1rem;
+  }
+  footer .footer-section-body section p {
+    font-size: 1rem;
+  }
+}
+footer .icons {
+  display: flex;
+  gap: 10%;
+}
+@media (min-width: 768px) {
+  footer .icons {
+    gap: 0%;
+  }
+}
+@media (min-width: 1280px) {
+  footer .icons {
+    gap: 0%;
+  }
+}
+footer .icons img {
+  padding-top: 1rem;
+  height: 2rem;
+}
+@media (min-width: 768px) {
+  footer .icons {
+    height: auto;
+  }
+}
+footer p {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  footer section {
+    flex-basis: 30%;
+  }
+}
+footer section p {
+  margin: 0;
+}
+footer section .email {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+footer section h2 {
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  footer section h3 {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .icons {
+    max-width: 20%;
+    align-items: end;
+    justify-content: space-between;
+    padding-bottom: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  footer .icons img {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  footer .icons img {
+    width: auto;
+    height: 50%;
+    display: flex;
+    align-items: end;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  footer .icons img {
+    margin-left: 20%;
+  }
 }
 
 .hero-section {
@@ -268,11 +423,26 @@ h1 {
   }
 }
 
+.comment-section-header {
+  padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .comment-section-header {
+    padding-left: 2rem;
+  }
+}
 .comment-section {
   display: flex;
   flex-direction: column;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+@media (min-width: 768px) {
+  .comment-section {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 .comment-section div {
   display: flex;
@@ -296,6 +466,13 @@ h1 {
   background-color: #FAFAFA;
   margin-bottom: 1rem;
 }
+@media (min-width: 768px) {
+  .comment-section div form #Name {
+    height: 3.5rem;
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+}
 .comment-section div form #comments {
   font-family: "Nunito Sans", sans-serif;
   height: 6rem;
@@ -303,6 +480,14 @@ h1 {
   border: #E1E1E1 1px solid;
   background-color: #FAFAFA;
   margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .comment-section div form #comments {
+    height: 7rem;
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
 }
 .comment-section div form .button {
   margin-bottom: 1rem;
