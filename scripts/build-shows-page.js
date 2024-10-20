@@ -62,6 +62,18 @@ function renderShows(show) {
     button.className = 'buy-tickets-button';
     button.style.zIndex = '10';
 
+    button.addEventListener('mouseenter', function () {
+        button.style.backgroundColor = 'black';
+    })
+
+    button.addEventListener('mouseleave', function () {
+        button.style.backgroundColor = '';
+    })
+
+    button.addEventListener('click', function (){
+        alert("Can't buy tickets just yet!");
+    } )
+    
     div.appendChild(button);
     
     anotherdiv4.appendChild(div)

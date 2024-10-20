@@ -44,8 +44,6 @@ function renderComment(comment) {
     bigdiv.appendChild(theotherdiv);
 
     document.getElementById('comments-list').appendChild(bigdiv);
-    // document.getElementById('comments-list').appendChild(anotherdiv);
-    // document.getElementById('comments-list').appendChild(div);
 }
 
 defaultComments.forEach(renderComment);
