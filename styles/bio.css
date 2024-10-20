@@ -518,6 +518,12 @@ footer section h2 {
   padding: 0.5rem;
   font-size: 1rem;
 }
+@media (min-width: 768px) {
+  .comment-section div form .button {
+    width: 30%;
+    margin-left: auto;
+  }
+}
 
 .avatar {
   width: 3rem;
