@@ -1,12 +1,16 @@
 /* Mixins */
 /* Fonts */
 @font-face {
-  font-family: "Nunito Sans";
+  font-family: "NunitoSans-Regular";
   src: url("../../assets/Font/NunitoSans-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "NunitoSans-Bold";
+  src: url("../../assets/Font/NunitoSans-Bold.woff") formar("woff");
 }
 /* Variables */
 body {
-  font-family: "Nunito Sans";
+  font-family: "NunitoSans-Regular", "NunitoSans-Bold";
   margin: 0;
 }
 
@@ -37,11 +41,11 @@ nav {
   align-items: center;
   flex-direction: column;
   background-color: #323232;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 nav a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   nav {
@@ -76,6 +80,12 @@ h1 {
   justify-content: space-evenly;
   width: 100%;
 }
+.nav-subheading h3.active {
+  border-bottom: #ffffff solid 0.2rem;
+}
+.nav-subheading h3 {
+  text-decoration: none;
+}
 @media (min-width: 768px) {
   .nav-subheading {
     display: flex;
@@ -91,6 +101,7 @@ h1 {
   padding: 1rem;
   margin: 0;
   font-size: 1rem;
+  border-bottom: 0.1rem solid transparent;
 }
 @media (min-width: 768px) {
   .nav-subheading h3 {
@@ -101,14 +112,13 @@ h1 {
 }
 .nav-subheading h3:hover {
   font-weight: 800;
-  border-bottom: solid #FFFFFF 0.2rem;
-  padding-bottom: 0.01rem;
+  border-bottom-color: #ffffff;
 }
 
 footer {
   padding: 1rem;
   background-color: #323232;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 footer h3 {
   font-size: 1rem;
@@ -264,7 +274,7 @@ footer section h2 {
   z-index: 1;
   display: flex;
   justify-content: start;
-  color: #FFFFFF;
+  color: #ffffff;
   z-index: 1;
   flex-direction: column;
 }
@@ -292,7 +302,7 @@ footer section h2 {
   padding-bottom: 0;
 }
 .hero-section div h3 {
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 20%;
   font-size: 2rem;
 }
@@ -356,6 +366,15 @@ footer section h2 {
   }
 }
 
+h3.active2 {
+  border-bottom: #ffffff solid 0.2rem;
+}
+
+h3 {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 #shows h3 {
   padding-left: 1rem;
   margin-bottom: 0.5rem;
@@ -373,8 +392,7 @@ footer section h2 {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
-  margin-bottom: 0.5rem;
-  border-bottom: #E1E1E1 2px solid;
+  border-bottom: #e1e1e1 2px solid;
 }
 #shows .shows-list h5 {
   margin-bottom: 1rem;
@@ -398,10 +416,13 @@ footer section h2 {
   margin-right: 1rem;
   border: none;
   background-color: #323232;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 4px;
+}
+#shows .buy-tickets-button:active .anotherdiv4 {
+  background-color: #e1e1e1;
 }
 @media (min-width: 768px) {
   #shows .buy-tickets-button {
@@ -423,6 +444,9 @@ footer section h2 {
     font-size: 0.8rem;
     font-weight: 700;
   }
+}
+#shows .anotherdiv4:hover {
+  background-color: #fafafa;
 }
 @media (min-width: 768px) {
   #shows {

@@ -60,9 +60,19 @@ function renderShows(show) {
     let button = document.createElement('button');
     button.innerText = "BUY TICKETS";
     button.className = 'buy-tickets-button';
+    button.style.zIndex = '10';
+
     div.appendChild(button);
     
     anotherdiv4.appendChild(div)
+
+    anotherdiv4.addEventListener('click', function () {
+        if (anotherdiv4.style.backgroundColor === 'rgb(225, 225, 225)') {
+            anotherdiv4.style.backgroundColor = '';  
+        } else {
+            anotherdiv4.style.backgroundColor = '#E1E1E1';  
+        }
+    });
 
     document.getElementById('anotherdiv').appendChild(anotherdiv4);
 }

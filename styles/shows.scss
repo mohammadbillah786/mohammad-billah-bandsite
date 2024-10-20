@@ -17,18 +17,16 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+
     .split {
-        padding-left: 5rem;
-        width: 60%;
+      padding-left: 5rem;
+      width: 60%;
     }
   }
 
   @include tablet {
     height: 70vh;
   }
-
-
 
   div {
     z-index: 4;
@@ -104,6 +102,15 @@
   }
 }
 
+h3.active2 {
+  border-bottom: $white solid 0.2rem;
+}
+
+h3 {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 #shows {
   h3 {
     padding-left: 1rem;
@@ -125,7 +132,6 @@
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
-    margin-bottom: 0.5rem;
     border-bottom: $mercury 2px solid;
 
     h5 {
@@ -157,6 +163,12 @@
     font-size: 1rem;
     border-radius: 4px;
 
+    &:active {
+      .anotherdiv4 {
+        background-color: $mercury;
+      }
+    }
+
     @include tablet {
       margin-left: 0;
       display: flex;
@@ -174,6 +186,12 @@
         font-size: 0.8rem;
         font-weight: 700;
       }
+    }
+  }
+
+  .anotherdiv4 {
+    &:hover {
+      background-color: $alabaster;
     }
   }
 

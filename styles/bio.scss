@@ -173,6 +173,10 @@
 @include tablet {
   .comment-section-header {
     padding-left: 2rem;
+
+    @include desktop {
+      padding-left: 6rem;
+    }
   } 
   
 }
@@ -186,6 +190,11 @@
   @include tablet {
     padding-left: 4rem;
     padding-right: 4rem;
+
+    @include desktop {
+      padding-left: 25rem;
+      padding-right: 25rem;
+    }
   }
 
   div {
@@ -231,6 +240,7 @@
           font-size: 1rem;
           padding-left: 1rem;
           padding-top: 1rem;
+
         }
 
       }

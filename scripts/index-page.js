@@ -56,18 +56,57 @@ function renderdisplay() {
     commentsList.innerHTML='';
 }
 
-
 const form = document.getElementById('commentsForm');
+
+const button = document.querySelector('button');
+button.addEventListener('mouseenter', function() {
+    button.style.backgroundColor = 'black'; 
+});
+button.addEventListener('mouseleave', function() {
+    button.style.backgroundColor = ''; 
+});
+
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-    let obj = {}
-    obj['names'] = event.target.Name.value;
-    obj['date'] = '10/17/2023';
-    obj['comment'] = event.target.comments.value;
+
+    let nameInput = event.target.Name;
+    let commentInput = event.target.comments;
+
+    let nameValue = nameInput.value.trim();
+    let commentValue = commentInput.value.trim();
+
+    nameInput.style.border = '';
+    commentInput.style.border = '';
+
+    let hasError = false;
+
+    if (!nameValue) {
+        nameInput.style.border = '1px solid red';
+        hasError = true;
+    }
+
+    if (!commentValue) {
+        commentInput.style.border = '1px solid red'; 
+        hasError = true;
+    }
+
+    if (hasError) {
+        return;
+    }
+
+    let obj = {};
+    obj['names'] = nameValue;
+    obj['date'] = new Date().toLocaleDateString();
+    obj['comment'] = commentValue;
+
     defaultComments.unshift(obj);
+
     renderdisplay();
     defaultComments.forEach(renderComment);
-})
+
+    nameInput.value = '';
+    commentInput.value = '';
+});
 
 
 
