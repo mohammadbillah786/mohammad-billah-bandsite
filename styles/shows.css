@@ -2,11 +2,11 @@
 /* Fonts */
 @font-face {
   font-family: "NunitoSans-Regular";
-  src: url("../../assets/Font/NunitoSans-Regular.woff") format("woff");
+  src: url("../assets/Font/NunitoSans-Regular.woff") format("woff");
 }
 @font-face {
-  font-family: "NunitoSans-Bold";
-  src: url("../../assets/Font/NunitoSans-Bold.woff") formar("woff");
+  font-family: "NunitoSans-Bold", sans-serif;
+  src: url("../assets/Font/NunitoSans-Bold.woff") formar("woff");
 }
 /* Variables */
 body {
