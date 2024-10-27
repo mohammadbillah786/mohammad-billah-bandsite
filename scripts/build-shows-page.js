@@ -1,11 +1,24 @@
-const defaultShows = [
-    { date: "Mon Sept 09 2024", venue: "Ronald Lane", location: "San Francsisco, CA"},
-    { date: "Tue Sept 17 2024", venue: "Pier 3 East", location: "San Francsisco, CA"},
-    { date: "Sat Oct 12 2024", venue: "View Lounge", location: "San Francsisco, CA"},
-    { date: "Sat Nov 16 2024", venue: "Hyatt Agency", location: "San Francsisco, CA"},
-    { date: "Fri Nov 29 2024", venue: "Moscow Center", location: "San Francsisco, CA"},
-    { date: "Wed Dec 18 2024 ", venue: "Press Club", location: "San Francsisco, CA"},
-]
+import BandSiteApi from './band-site-api.js';
+
+const bandSiteApi = new BandSiteApi();
+
+async function loadAndRenderShows() {
+    try {
+        const shows = await bandSiteApi.getShows();
+
+        shows.forEach(show => {
+            const showDate = new Date(show.date).toLocaleDateString();
+
+            renderShows({
+                date: showDate,
+                venue: show.place,
+                location: show.location
+            });
+        });
+    } catch (error) {
+        console.error("Error", error);
+    }
+}
 
 function renderShows(show) {
     const anotherdiv4 = document.createElement('div');
@@ -89,4 +102,4 @@ function renderShows(show) {
     document.getElementById('anotherdiv').appendChild(anotherdiv4);
 }
 
-defaultShows.forEach(renderShows)
+loadAndRenderShows();

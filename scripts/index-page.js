@@ -1,9 +1,19 @@
-const defaultComments = [
-    { names: "Victor Pinto", date: "11/02/2023", comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains." },
-    { names: "Christina Cabrera", date: "10/28/2023", comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day." },
-    { names: "Isaac Tadesse", date: "10/20/2023", comment: "I can't stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough." },
-]
+import BandSiteApi from './band-site-api.js';
 
+const bandSiteApi = new BandSiteApi();
+
+async function loadAndRenderComments() {
+    try {
+        const comments = await bandSiteApi.getComments();
+        
+        renderdisplay();
+
+        comments.forEach(renderComment);
+
+    } catch (error) {
+        console.log('Error', error);
+    }
+}
 
 function renderComment(comment) {
 
@@ -21,11 +31,11 @@ function renderComment(comment) {
     div.className = 'new-comments-list';
 
     let newHeader = document.createElement('h4');
-    newHeader.innerText = comment.names;
+    newHeader.innerText = comment.name;
     div.appendChild(newHeader);
 
     let newDate = document.createElement('h4');
-    newDate.innerText = comment.date;
+    newDate.innerText = new Date(comment.timestamp).toLocaleDateString();
     div.appendChild(newDate);
 
     theotherdiv.appendChild(div);
@@ -46,7 +56,7 @@ function renderComment(comment) {
     document.getElementById('comments-list').appendChild(bigdiv);
 }
 
-defaultComments.forEach(renderComment);
+loadAndRenderComments();
 
 const commentsList = document.getElementById('comments-list');
 
@@ -64,7 +74,7 @@ button.addEventListener('mouseleave', function() {
     button.style.backgroundColor = ''; 
 });
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', async function(event) {
     event.preventDefault();
 
     let nameInput = event.target.Name;
@@ -92,15 +102,18 @@ form.addEventListener('submit', function(event) {
         return;
     }
 
-    let obj = {};
-    obj['names'] = nameValue;
-    obj['date'] = new Date().toLocaleDateString();
-    obj['comment'] = commentValue;
+    const newComment = {
+        name: nameValue,
+        comment: commentValue
+    };
 
-    defaultComments.unshift(obj);
+    try {
+        await bandSiteApi.postComment(newComment);
 
-    renderdisplay();
-    defaultComments.forEach(renderComment);
+        loadAndRenderComments();
+    } catch(error) {
+        console.error("Error,", error);
+    }
 
     nameInput.value = '';
     commentInput.value = '';
